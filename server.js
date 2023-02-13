@@ -1,3 +1,20 @@
 const app = require('./app');
 
-app.listen(3000);
+const mongoose = require("mongoose");
+
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const { DB_HOST } = process.env;
+
+mongoose.set('strictQuery', false);
+
+mongoose.connect(DB_HOST)
+.then(() =>     app.listen(3000, () => {
+    console.log("Database connection successful");
+  }))
+.catch(error => console.log(error.message)) ;
+
+// app.listen(4000);
+
