@@ -1,31 +1,38 @@
-## GoIT Node.js Course Template Homework
+# Contacts database
 
-Виконайте форк цього репозиторію для виконання домашніх завдань (2-6)
-Форк створить репозиторій на вашому http://github.com
+## Used libraries
 
-Додайте ментора до колаборації
+The following libraries were used when working on the project  
+[cors](https://www.npmjs.com/package/cors)  
+[cross-env](https://www.npmjs.com/package/cross-env)  
+[dotenv](https://www.npmjs.com/package/dotenv)  
+[express](https://www.npmjs.com/package/express)  
+[joi](https://www.npmjs.com/package/joi)  
+[moment](https://www.npmjs.com/package/moment)  
+[mongoose](https://www.npmjs.com/package/mongoose)  
+[morgan](https://www.npmjs.com/package/morgan)  
+[nanoid](https://www.npmjs.com/package/nanoid)  
 
-Для кожної домашньої роботи створюйте свою гілку.
+## Usage
 
-- hw02
-- hw03
-- hw04
-- hw05
-- hw06
+```python
+import foobar
 
-Кожна нова гілка для др повинна робитися з master
+# Return all contacts
+get .../api/contacts
 
-Після того, як ви закінчили виконувати домашнє завдання у своїй гілці, необхідно зробити пулл-реквест (PR). Потім додати ментора для рев'ю коду. Тільки після того, як ментор заапрувить PR, ви можете виконати мердж гілки з домашнім завданням у майстер.
+# Return contact by "id"
+get .../api/contacts/:id
 
-Уважно читайте коментарі ментора. Виправте зауваження та зробіть коміт у гілці з домашнім завданням. Зміни підтягнуться у PR автоматично після того, як ви відправите коміт з виправленнями на github
-Після виправлення знову додайте ментора на рев'ю коду.
+# Add a contact to the contact list
+post .../api/contacts
 
-- При здачі домашньої роботи є посилання на PR
-- JS-код чистий та зрозумілий, для форматування використовується Prettier
+# Delete contact by "id"
+delete .../api/contacts/:id
 
-### Команди:
+# Update contact details by "id"
+put .../api/contacts/:id
 
-- `npm start` &mdash; старт сервера в режимі production
-- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
-- `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
-- `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
+# Change the "favorite" field for a contact by "id"
+patch .../api/contacts/:id/favorite
+```
