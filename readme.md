@@ -35,4 +35,19 @@ put .../api/contacts/:id
 
 # Change the "favorite" field for a contact by "id"
 patch .../api/contacts/:id/favorite
+
+# New user registration
+post .../api/auth/register
+
+# User login
+post .../api/auth/login
+
+# Getting information about the current user
+get .../api/auth/current
+
+# User logout
+post .../api/auth/logout
+
+# Sets a new avatar for the current user
+patch .../api/auth/avatars
 ```
