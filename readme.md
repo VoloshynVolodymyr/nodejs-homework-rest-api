@@ -39,6 +39,12 @@ patch .../api/contacts/:id/favorite
 # New user registration
 post .../api/auth/register
 
+# Sends a link for authorization to the user's email
+get .../api/auth//verify/:verificationToken
+
+# Re-sends the verification link to the user's email
+post .../api/auth//resend-verify-email
+
 # User login
 post .../api/auth/login
 
